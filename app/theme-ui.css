@@ -1,0 +1,184 @@
+/* Shared semantic roles apply to every palette, including the earlier options. */
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+input {
+  caret-color: var(--accent);
+}
+* {
+  scrollbar-color: var(--border) var(--background);
+}
+button:hover,
+a:hover {
+  filter: none;
+}
+.sidebar,
+.icon-rail,
+.context-panel {
+  background: var(--sidebar);
+}
+.topbar,
+.workspace-bar,
+.request-tabs,
+.json-heading,
+.json-note {
+  background: var(--surface);
+}
+.brand-symbol,
+.primary,
+.send-button,
+.skip-link {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.send-button:hover,
+.primary:hover {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.icon-button {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 5px;
+}
+.icon-button:hover,
+.resume-button:hover {
+  background: var(--sidebar);
+  color: var(--foreground);
+}
+.text-button,
+.sidebar-note button,
+.json-note button,
+em,
+.response-status > span:first-child {
+  color: var(--accent-text);
+}
+.text-button:hover,
+.sidebar-note button:hover,
+.json-note button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.method,
+.request-method,
+.method-get,
+.method[data-method="GET"] {
+  color: var(--http-get);
+}
+.method-post,
+.method[data-method="POST"] {
+  color: var(--http-post);
+}
+.method-put,
+.method[data-method="PUT"] {
+  color: var(--http-put);
+}
+.method-patch,
+.method[data-method="PATCH"] {
+  color: var(--http-patch);
+}
+.method-delete,
+.method[data-method="DELETE"] {
+  color: var(--http-delete);
+}
+.status-dot {
+  background: var(--http-get);
+}
+.nav-items button.active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.nav-items button.active .method {
+  background: var(--background);
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: -3px;
+}
+.nav-items button.active .active-dot {
+  background: var(--primary-foreground);
+}
+.nav-items button:not(.active):hover {
+  background: var(--surface);
+  color: var(--foreground);
+}
+.response-views button.active {
+  color: var(--accent-text);
+  border-bottom-color: var(--primary);
+}
+.brand-light,
+.icon-button,
+.eyebrow,
+.sidebar-footer,
+.main-footer,
+.code-comment,
+.context-caption {
+  color: var(--readable-muted);
+}
+.profile-code,
+.mini-app {
+  box-shadow: none;
+}
+.sidebar-title button,
+.project-number,
+.rail-disabled {
+  opacity: 1;
+}
+.workspace-separator {
+  color: var(--readable-muted);
+}
+.json-panel {
+  --json-bg: var(--code-background);
+}
+.json-panel pre {
+  color: var(--json-punctuation);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+dialog,
+.theme-modal {
+  color: var(--foreground);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+dialog::backdrop {
+  background: #0008;
+}
+
+.top-actions > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 5px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.top-actions > a:hover {
+  background: var(--sidebar);
+  color: var(--accent-text);
+}
+@media (max-width: 650px) {
+  .top-actions {
+    gap: 8px;
+  }
+  .top-actions > a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,460 @@
+/* Final portfolio design: Impeccable layout with the original tilted code card. */
+.workspace {
+  --space-control: 12px;
+  --space-group: 24px;
+  --space-section: 40px;
+}
+.workspace .main-panel {
+  container-type: inline-size;
+}
+.workspace
+  :is(
+    .hero-kicker,
+    .page-intro > .eyebrow,
+    .section-heading .eyebrow,
+    .resume-content > .eyebrow,
+    .context-panel > .eyebrow,
+    .assistant-orb,
+    .context-caption,
+    .tab-hint,
+    .floating-spark,
+    .orbit,
+    .little-note,
+    .wave,
+    .footer-star
+  ) {
+  display: none;
+}
+.workspace .brand-symbol {
+  transform: none;
+}
+.workspace .brand-symbol {
+  border-radius: 8px;
+}
+.workspace .workspace-bar {
+  background: var(--background);
+  padding-block: 12px;
+}
+.workspace .request-tabs {
+  background: var(--background);
+}
+.workspace .request-tab {
+  min-width: 0;
+  width: max-content;
+  gap: 10px;
+  padding-inline: 16px;
+  background: var(--sidebar);
+  border-top-color: var(--primary);
+}
+.workspace .request-tab .tab-dot {
+  margin-left: 2px;
+}
+.workspace .top-actions :is(.resume-button, .icon-button, a) {
+  min-height: 38px;
+  min-width: 38px;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--readable-muted);
+  font-weight: 500;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.workspace .top-actions .resume-button {
+  padding-inline: 12px;
+  border-color: transparent;
+  background: transparent;
+}
+.workspace .top-actions :is(.resume-button, .icon-button, a) > svg {
+  color: inherit;
+}
+.workspace .top-actions :is(.resume-button, .icon-button, a):hover {
+  background: var(--sidebar);
+  color: var(--foreground);
+  color: light-dark(#000, #fff);
+}
+.workspace .request-area {
+  padding: 20px 28px;
+}
+.workspace .request-bar {
+  height: 48px;
+  padding: 4px;
+  background: var(--sidebar);
+  border-radius: 8px;
+}
+.workspace .send-button {
+  min-height: 38px;
+  padding-inline: 20px;
+  border-radius: 5px;
+}
+.workspace .request-url {
+  font-family: "DM Mono", monospace;
+}
+.workspace .response-toolbar {
+  height: 48px;
+  padding-inline: 28px;
+}
+.workspace .response-views {
+  gap: 24px;
+}
+.workspace .response-views button {
+  padding-inline: 0;
+  font-weight: 500;
+}
+.workspace .response-content {
+  padding: 32px 28px;
+}
+.workspace .hero {
+  grid-template-columns: minmax(0, 1fr) 248px;
+  align-items: center;
+  gap: 24px;
+  padding: 8px 0 32px;
+  min-height: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--background);
+  overflow: visible;
+}
+.workspace
+  :is(
+    .hero h1,
+    .page-intro h1,
+    .resume-content h1,
+    .section-heading h2,
+    .context-panel h2,
+    .resume-heading
+  ) {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.workspace .hero h1 {
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+.workspace .hero p {
+  max-width: 48ch;
+  color: var(--readable-muted);
+  line-height: 1.75;
+}
+.workspace .hero .primary {
+  margin-top: 24px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+.workspace .hero-illustration {
+  min-height: 0;
+  padding: 12px 8px;
+}
+.workspace .profile-code {
+  width: 100%;
+  max-width: 248px;
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--code-background);
+  overflow: hidden;
+  transform: rotate(-5deg);
+  box-shadow: 8px 11px 24px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.workspace .code-window {
+  padding: 12px 14px;
+  background: var(--sidebar);
+}
+.workspace .code-lines {
+  padding: 16px 14px;
+}
+.workspace .about-strip {
+  padding: 16px 0;
+  margin: 0;
+  border: 0;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  color: var(--readable-muted);
+}
+.workspace .section-heading {
+  margin: var(--space-section) 0 16px;
+  align-items: center;
+}
+.workspace .section-heading h2 {
+  margin: 0;
+}
+.workspace .project-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+.workspace .project-card {
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 24px 0;
+  background: transparent;
+}
+.workspace .project-card:first-child {
+  padding-top: 8px;
+}
+.workspace .project-art {
+  display: none;
+}
+.workspace .project-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 16px;
+  padding: 0;
+}
+.workspace .project-details > .eyebrow {
+  grid-column: 1;
+  grid-row: 2;
+  font-family: inherit;
+  letter-spacing: 0;
+  margin: 4px 0 8px;
+}
+.workspace .project-details h3 {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  font-weight: 600;
+}
+.workspace .project-period {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 3px 0 0;
+  text-align: right;
+}
+.workspace .project-details p {
+  grid-column: 1/-1;
+  max-width: 70ch;
+  margin: 0 0 16px;
+}
+.workspace .project-details .tags {
+  grid-column: 1/-1;
+  gap: 6px;
+}
+.workspace .project-link {
+  grid-column: 1/-1;
+  justify-self: start;
+  margin: 0;
+  padding-top: 16px;
+  min-height: 44px;
+}
+.workspace .tags > span {
+  border: 1px solid var(--border);
+  background: var(--sidebar);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.workspace .sidebar {
+  padding: 20px 12px;
+}
+.workspace .search {
+  min-height: 44px;
+  margin: 16px 0 24px;
+  border-radius: 6px;
+}
+.workspace .recruiter-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 9px;
+  width: 100%;
+  margin: 16px 0 0;
+  padding: 15px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  text-align: left;
+  transition:
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+  animation: resume-invitation 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s 1;
+}
+.workspace .recruiter-entry:hover {
+  box-shadow: 0 5px 14px #0002;
+  transform: translateY(-1px);
+}
+.workspace .recruiter-entry:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+}
+.workspace .recruiter-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--type-control);
+}
+.workspace .recruiter-heading svg {
+  flex-shrink: 0;
+}
+.workspace .recruiter-heading strong {
+  font-weight: 650;
+}
+.workspace .recruiter-copy {
+  font-size: var(--type-caption);
+  line-height: 1.65;
+}
+.workspace .recruiter-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 5px;
+  font-size: var(--type-control);
+  font-weight: 650;
+}
+.workspace .recruiter-action svg {
+  animation: resume-direction 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.65s 2;
+}
+@keyframes resume-invitation {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  35% {
+    border-color: var(--primary-foreground);
+  }
+}
+@keyframes resume-direction {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(4px);
+  }
+}
+.workspace .nav-items button {
+  min-height: 44px;
+}
+.workspace .page-intro {
+  padding: 0 0 28px;
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+.workspace .page-intro h1 {
+  margin: 0 0 16px;
+}
+.workspace .timeline {
+  margin-top: 32px;
+}
+.workspace .timeline article {
+  padding-bottom: 32px;
+}
+.workspace .education-list {
+  gap: 24px;
+}
+.workspace .resume-content {
+  padding: 40px 32px;
+}
+.workspace .resume-content h1 {
+  margin: 0 0 8px;
+}
+.workspace .json-editor {
+  border-radius: 8px;
+}
+.workspace .chat-topics span {
+  background: var(--sidebar);
+  border-radius: 6px;
+}
+.workspace .chat-composer-field {
+  border-radius: 12px;
+  background: var(--sidebar);
+  padding: 16px;
+}
+.workspace .main-footer {
+  padding: 20px 28px;
+}
+.workspace .bottom-note {
+  font-family: inherit;
+  font-style: normal;
+}
+.workspace .bottom-note .text-button {
+  font: inherit;
+  font-weight: 500;
+}
+.workspace .page-intro.contact-intro {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.workspace .contact-intro h1 {
+  margin-bottom: 10px;
+}
+.workspace .contact-intro p {
+  max-width: 60ch;
+}
+.workspace .text-button:focus-visible {
+  outline-offset: 3px;
+}
+@container (max-width:600px) {
+  .workspace .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workspace .hero-illustration {
+    justify-content: flex-start;
+    margin-top: 8px;
+  }
+}
+@container (max-width:460px) {
+  .workspace .hero-illustration {
+    display: none;
+  }
+  .workspace .project-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workspace .project-period {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: left;
+    margin: 0 0 12px;
+  }
+}
+@media (max-width: 650px) {
+  .resume-entry-prefix {
+    display: none;
+  }
+  .workspace :is(.request-area, .response-content, .resume-content) {
+    padding: 24px 20px;
+  }
+  .workspace .request-area {
+    padding-block: 16px;
+  }
+  .workspace .breadcrumb {
+    display: none;
+  }
+  .workspace .request-meta > span:last-child {
+    display: none;
+  }
+  .workspace .response-toolbar {
+    padding-inline: 20px;
+  }
+  .workspace .request-url {
+    padding-inline: 8px;
+  }
+  .workspace .send-button {
+    padding-inline: 12px;
+  }
+  .workspace .hero {
+    padding-bottom: 24px;
+  }
+  .workspace .section-heading {
+    margin-top: 32px;
+  }
+  .workspace .education-list {
+    gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workspace .recruiter-entry,
+  .workspace .recruiter-action svg {
+    animation: none;
+  }
+  .workspace .recruiter-entry:hover {
+    transform: none;
+  }
+}

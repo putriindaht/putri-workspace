@@ -1,0 +1,109 @@
+/* Midnight Indigo is the portfolio’s fixed palette; both appearances retain readable role tokens. */
+:root {
+  --background: #f8faff;
+  --sidebar: #eef1f9;
+  --surface: #ffffff;
+  --primary: #4f46e5;
+  --accent: #4f46e5;
+  --foreground: #18213a;
+  --muted-foreground: #64748b;
+  --border: #dce3f0;
+  --readable-muted: #606f85;
+  --primary-foreground: #ffffff;
+  --accent-text: #4f46e5;
+  --code-background: #f8faff;
+  --json-key: #4f46e5;
+  --json-string: #326445;
+  --json-number: #8b4e25;
+  --json-literal: #824693;
+  --json-punctuation: #64748b;
+  --json-gutter: #64748b;
+  --http-get: #167347;
+  --http-post: #875500;
+  --http-put: #235fc5;
+  --http-patch: #7442b8;
+  --http-delete: #b92937;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-color-mode]) {
+    --background: #0f1220;
+    --sidebar: #191e30;
+    --surface: #252c43;
+    --primary: #6366f1;
+    --accent: #a5b4fc;
+    --foreground: #f1f4ff;
+    --muted-foreground: #a8b3cf;
+    --border: #343d58;
+    --readable-muted: #a8b3cf;
+    --primary-foreground: #000000;
+    --accent-text: #a5b4fc;
+    --code-background: #0f1220;
+    --json-key: #a5b4fc;
+    --json-string: #a7cfbb;
+    --json-number: #e1ba92;
+    --json-literal: #ccb3e9;
+    --json-punctuation: #a8b3cf;
+    --json-gutter: #a8b3cf;
+    --http-get: #6ee7b7;
+    --http-post: #fcd34d;
+    --http-put: #93c5fd;
+    --http-patch: #c4b5fd;
+    --http-delete: #fca5a5;
+    color-scheme: dark;
+  }
+}
+
+:root[data-palette="midnight-indigo"][data-color-mode="light"] {
+  --background: #f8faff;
+  --sidebar: #eef1f9;
+  --surface: #ffffff;
+  --primary: #4f46e5;
+  --accent: #4f46e5;
+  --foreground: #18213a;
+  --muted-foreground: #64748b;
+  --border: #dce3f0;
+  --readable-muted: #606f85;
+  --primary-foreground: #ffffff;
+  --accent-text: #4f46e5;
+  --code-background: #f8faff;
+  --json-key: #4f46e5;
+  --json-string: #326445;
+  --json-number: #8b4e25;
+  --json-literal: #824693;
+  --json-punctuation: #64748b;
+  --json-gutter: #64748b;
+  --http-get: #167347;
+  --http-post: #875500;
+  --http-put: #235fc5;
+  --http-patch: #7442b8;
+  --http-delete: #b92937;
+  color-scheme: light;
+}
+
+:root[data-palette="midnight-indigo"][data-color-mode="dark"] {
+  --background: #0f1220;
+  --sidebar: #191e30;
+  --surface: #252c43;
+  --primary: #6366f1;
+  --accent: #a5b4fc;
+  --foreground: #f1f4ff;
+  --muted-foreground: #a8b3cf;
+  --border: #343d58;
+  --readable-muted: #a8b3cf;
+  --primary-foreground: #000000;
+  --accent-text: #a5b4fc;
+  --code-background: #0f1220;
+  --json-key: #a5b4fc;
+  --json-string: #a7cfbb;
+  --json-number: #e1ba92;
+  --json-literal: #ccb3e9;
+  --json-punctuation: #a8b3cf;
+  --json-gutter: #a8b3cf;
+  --http-get: #6ee7b7;
+  --http-post: #fcd34d;
+  --http-put: #93c5fd;
+  --http-patch: #c4b5fd;
+  --http-delete: #fca5a5;
+  color-scheme: dark;
+}
