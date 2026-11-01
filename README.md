@@ -100,3 +100,15 @@ The generated site is available in `out/`. For a GitHub Pages build under `/putr
 ```sh
 GITHUB_PAGES=true npm run build
 ```
+
+## Publish with GitHub Pages
+
+The `.github/workflows/deploy-pages.yml` workflow builds and publishes the portfolio whenever changes are pushed to `main`.
+
+1. Open the repository on GitHub and go to **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push changes to `main`, or open **Actions → Deploy portfolio to GitHub Pages → Run workflow**.
+4. Wait for the build and deployment to finish successfully.
+5. Open and share <https://putriindaht.github.io/putri-workspace/>.
+
+Future pushes to `main` update the same website address automatically.
