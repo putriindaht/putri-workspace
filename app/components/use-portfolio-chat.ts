@@ -246,16 +246,42 @@ export function usePortfolioChat() {
         { id, role: "assistant", engine: "guide", text: "" },
       ]);
       guideTimer.current = setTimeout(() => {
-        guideTimer.current = null;
-        if (run !== generation.current) return;
-        updateMessages((messages) =>
-          messages.map((message) =>
-            message.id === id ? { ...message, ...answer } : message,
-          ),
-        );
-        busy.current = false;
-        activeReply.current = null;
-        setGenerating(false);
+        const words = answer.text.match(/\S+\s*/g) ?? [answer.text];
+        const chunkSize = Math.max(2, Math.ceil(words.length / 30));
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        let visibleWords = 0;
+
+        function revealReply() {
+          guideTimer.current = null;
+          if (run !== generation.current) return;
+
+          visibleWords = reduceMotion
+            ? words.length
+            : Math.min(words.length, visibleWords + chunkSize);
+          const complete = visibleWords === words.length;
+          const reply = words.slice(0, visibleWords).join("");
+
+          updateMessages((messages) =>
+            messages.map((message) => {
+              if (message.id !== id) return message;
+              return complete
+                ? { ...message, ...answer }
+                : { ...message, text: reply };
+            }),
+          );
+
+          if (complete) {
+            busy.current = false;
+            activeReply.current = null;
+            setGenerating(false);
+          } else {
+            guideTimer.current = setTimeout(revealReply, 60);
+          }
+        }
+
+        revealReply();
       }, 2000);
       return;
     }

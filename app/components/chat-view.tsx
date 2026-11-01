@@ -238,6 +238,13 @@ export function ChatView({
             <article
               key={message.id}
               className={`chat-message chat-message--${message.role}`}
+              data-streaming={
+                generating &&
+                message.role === "assistant" &&
+                message.id === messages[messages.length - 1]?.id
+                  ? true
+                  : undefined
+              }
             >
               <span className="chat-message-author">
                 {message.role === "user"
